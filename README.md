@@ -4,7 +4,7 @@
 
 | Date       | Version Notes |  
 |------------|---------------|  
-| 2024-10-06 | 0.0.1 Initial release |
+| 2024-10-04 | 0.0.1 Initial release |
 
 ---
 
