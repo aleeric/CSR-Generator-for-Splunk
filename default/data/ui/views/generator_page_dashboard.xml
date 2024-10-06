@@ -1,0 +1,55 @@
+<dashboard isDashboard="true" script="javascript/generateCSR.js" stylesheet="styles/generator_page.css" hideTitle="true" version="1.1">
+  <label>CSR Generator</label>
+  <row>
+    <panel>
+      <html>
+        <div class="container">
+          <div class="title">
+            CSR Generator
+          </div>
+          <div class="subtitle">
+            Company Details
+          </div>
+          <div class="text-container">
+            <div class="text">
+              <span>Common Name (CN):</span>
+              <input type="text" id="cn_input" token="ca"/>
+            </div>
+            <div class="text">
+              <span>Country:</span>
+              <input type="text" id="country_input" token="country"/>
+            </div>
+            <div class="text">
+              <span>State:</span>
+              <input type="text" id="state_input" token="state"/>
+            </div>
+            <div class="text">
+              <span>Locality:</span>
+              <input type="text" id="locality_input" token="locality"/>
+            </div>
+            <div class="text">
+              <span>Organization:</span>
+              <input type="text" id="organization_input" token="organization"/>
+            </div>
+            <div class="text">
+              <span>Organizational Unit:</span>
+              <input type="text" id="organizationalunit_input" token="organizationalunit"/>
+            </div>
+          </div>
+          <button class="btn btn-primary button1" id="setup_button">Generate CSR</button>
+          <div class="success">Key and CSR files generated successfully</div>
+        </div>
+        <div class="results">
+          <div>
+                  <h3>CSR:</h3>
+                  <pre id="csr_output" style="border: 1px solid #ccc; padding: 10px; overflow-x: auto;"></pre>
+          </div>
+          <div>
+              <h3>Key:</h3>
+              <pre id="key_output" style="border: 1px solid #ccc; padding: 10px; overflow-x: auto;"></pre>
+          </div>
+        </div>
+      </html>
+    </panel>
+  </row>
+</dashboard>
