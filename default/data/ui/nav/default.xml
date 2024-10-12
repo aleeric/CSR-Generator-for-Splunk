@@ -1,0 +1,5 @@
+<nav>
+  <view name="generator_page_dashboard" default='true'/>
+  <view name="search" default='false'/>
+</nav>
+
