@@ -80,7 +80,9 @@ The app leverages the OpenSSL binary bundled with Splunk (`splunk cmd openssl`) 
 
 ---
 
-## Source
+## Links
 
-Feel free to contribute or fork via:  
-[https://github.com/aleeric/CSR-Generator](https://github.com/aleeric/CSR-Generator)
+- Feel free to contribute or Fork via [https://github.com/aleeric/CSR-Generator](https://github.com/aleeric/CSR-Generator)
+
+- Rate App on Splunkbase via https://splunkbase.splunk.com/app/7567
+
