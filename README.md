@@ -1,13 +1,15 @@
-# 🔐 CSR Generator for Splunk
+# CSR Generator for Splunk
 
-## 📖 Overview
+![](appserver/static/images/banner.png)
+
+## Overview
 
 **CSR Generator** is a Splunk app that allows users to generate a Certificate Signing Request (CSR) and a password-protected private key directly from a simple dashboard UI inside Splunk.  
 The app leverages the OpenSSL binary bundled with Splunk (`splunk cmd openssl`) and is fully compatible with **Windows and Linux environments**.
 
-![](appserver/static/images/view.png)
 
-## 🗓 Release History
+
+## Release History
 
 | Date       | Version | Notes                                                                 |
 |------------|---------|-----------------------------------------------------------------------|
@@ -17,11 +19,13 @@ The app leverages the OpenSSL binary bundled with Splunk (`splunk cmd openssl`) 
 
 ---
 
+## Dashboard
 
+![](appserver/static/images/view.png)
 
 ---
 
-## 🔍 Syntax
+## Syntax
 
 ```spl
 | gencsr common_name=<string> country=<string> state=<string> locality=<string> organization=<string> organizationalunit=<string> password=<string> subjectaltname=<string>
@@ -29,7 +33,7 @@ The app leverages the OpenSSL binary bundled with Splunk (`splunk cmd openssl`) 
 
 ---
 
-## 🧪 Example
+## Example
 
 ```spl
 | gencsr common_name="example.com" country="US" state="CA" locality="San Francisco" organization="Example Inc." organizationalunit="IT" password="securepassword" subjectaltname="www.example.com,mail.example.com"
@@ -37,7 +41,7 @@ The app leverages the OpenSSL binary bundled with Splunk (`splunk cmd openssl`) 
 
 ---
 
-## ✨ Features
+## Features
 
 - Generates CSRs using OpenSSL standards.
 - Full cross-platform support (Windows and Linux).
@@ -50,7 +54,7 @@ The app leverages the OpenSSL binary bundled with Splunk (`splunk cmd openssl`) 
 
 ---
 
-## 🆕 New in Version 0.1.0
+## New in Version 0.1.0
 
 - ✅ Complete UI redesign with two-panel layout (form on left, output on right).
 - ✅ Dashboard restyled for clarity, readability, and modern UX.
@@ -61,7 +65,7 @@ The app leverages the OpenSSL binary bundled with Splunk (`splunk cmd openssl`) 
 
 ---
 
-## ⚠ Known Limitations
+## Known Limitations
 
 - OpenSSL must be available via `splunk cmd openssl`.
 - Input validation checks only basic structure (e.g., valid characters in SAN/CN).
@@ -70,13 +74,13 @@ The app leverages the OpenSSL binary bundled with Splunk (`splunk cmd openssl`) 
 
 ---
 
-## 🙌 Credits
+## Credits
 
 - Inspired by **MS**
 
 ---
 
-## 📦 Source
+## Source
 
 Feel free to contribute or fork via:  
 [https://github.com/aleeric/CSR-Generator](https://github.com/aleeric/CSR-Generator)
