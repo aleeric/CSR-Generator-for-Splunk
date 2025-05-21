@@ -47,7 +47,6 @@ The app leverages the OpenSSL binary bundled with Splunk (`splunk cmd openssl`) 
 - Generates CSRs using OpenSSL standards.
 - Full cross-platform support (Windows and Linux).
 - Customizable fields: Common Name (CN), Country (C), State (ST), Locality (L), Organization (O), Organizational Unit (OU), and SubjectAltName (SAN).
-- Password protection for the generated private key (PKCS#8 PEM format).
 - Secure in-memory handling of key and CSR (temp files are securely deleted).
 - Outputs CSR and private key directly to the Splunk UI for easy copy/paste.
 - User-friendly dashboard UI with real-time validation and dynamic SAN input.
@@ -57,21 +56,12 @@ The app leverages the OpenSSL binary bundled with Splunk (`splunk cmd openssl`) 
 
 ## New in Version 0.1.0
 
-- ✅ Complete UI redesign with two-panel layout (form on left, output on right).
-- ✅ Dashboard restyled for clarity, readability, and modern UX.
-- ✅ Full compatibility with Splunk on Windows (no more stdin issues).
-- ✅ Sanitized OpenSSL output (`writing RSA key` line removed).
-- ✅ Clear separation between logic, layout, and style (JS / CSS / XML).
-- ✅ Responsive design with clean layout for enterprise use.
-
----
-
-## Known Limitations
-
-- OpenSSL must be available via `splunk cmd openssl`.
-- Input validation checks only basic structure (e.g., valid characters in SAN/CN).
-- The app executes synchronously — high-volume CSR generation may require performance tuning.
-- Some OpenSSL validation errors are surfaced raw from stdout/stderr.
+- UI rebuilt using modular SimpleXML layout with custom JS/CSS separation and explicit grid logic.
+- Decoupled rendering logic from command execution to improve maintainability and cross-browser behavior.
+- Replaced STDIN key handling with file-based input to ensure openssl works reliably on both Windows and Linux.
+- Output normalization: removed injected OpenSSL stderr content and ensured raw PEM output for both CSR and private key.
+- Refactored dashboard styling using scoped selectors and isolation-friendly CSS to avoid conflict with Splunk base styles.
+- Optimized DOM structure for better performance and rendering inside Splunk’s Web Framework under constrained environments.
 
 ---
 
