@@ -43,7 +43,7 @@ require([
         return errors;
     }
 
-    $(".button1").on("click", function() {
+    $("#setup_button").on("click", function() {
         var ok = confirm("Are you sure you want to generate a .key file and a .csr file with these parameters?");
         if (ok) {
             var inputValues = getInputValues();

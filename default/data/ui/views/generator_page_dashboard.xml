@@ -1,62 +1,42 @@
-<dashboard isDashboard="true" script="javascript/generateCSR.js" stylesheet="styles/generator_page.css" hideTitle="true" version="1.1">
+<dashboard isDashboard="true" script="javascript/generateCSR.js" stylesheet="styles/generator_page.css" hideTitle="true" version="1.8">
   <label>CSR Generator</label>
   <row>
     <panel>
       <html>
-        <div class="container">
-          <div class="title">
-            CSR Generator
-          </div>
-          <div class="subtitle">
-            Company Details
-          </div>
-          <div class="text-container">
-            <div class="text">
-              <span>Common Name (CN):</span>
-              <input type="text" id="cn_input" token="ca" required="true"/>
-            </div>
-            <div class="text">
-              <span>Country:</span>
-              <input type="text" id="country_input" token="country" placeholder="e.g., US" required="true"/>
-            </div>
-            <div class="text">
-              <span>State:</span>
-              <input type="text" id="state_input" token="state" placeholder="e.g., CA" required="true"/>
-            </div>
-            <div class="text">
-              <span>Locality:</span>
-              <input type="text" id="locality_input" token="locality" placeholder="e.g., San Francisco" required="true"/>
-            </div>
-            <div class="text">
-              <span>Organization:</span>
-              <input type="text" id="organization_input" token="organization" placeholder="e.g., My Company" required="true"/>
-            </div>
-            <div class="text">
-              <span>Organizational Unit:</span>
-              <input type="text" id="organizationalunit_input" token="organizationalunit" placeholder="e.g., IT" required="true"/>
-            </div>
-            <div class="text">
-              <span>Subject Alternative Names (SAN):</span>
+        <div class="dashboard-wrapper">
+          <!-- Left Panel: FORM -->
+          <div class="dashboard-panel form-panel">
+            <div class="panel-title">CSR Generator</div>
+            <div class="panel-subtitle">Company Information</div>
+
+            <div class="form-group"><label>Common Name (CN)</label><input type="text" id="cn_input"/></div>
+            <div class="form-group"><label>Country</label><input type="text" id="country_input" placeholder="e.g., US"/></div>
+            <div class="form-group"><label>State</label><input type="text" id="state_input" placeholder="e.g., CA"/></div>
+            <div class="form-group"><label>Locality</label><input type="text" id="locality_input" placeholder="e.g., SF"/></div>
+            <div class="form-group"><label>Organization</label><input type="text" id="organization_input" placeholder="e.g., MyOrg"/></div>
+            <div class="form-group"><label>Org Unit</label><input type="text" id="organizationalunit_input" placeholder="e.g., IT"/></div>
+
+            <div class="form-group">
+              <label>Subject Alternative Names (SAN)</label>
               <div id="san_container">
                 <input type="text" class="san_input" placeholder="e.g., san1.example.com"/>
               </div>
-              <button type="button" id="add_san">Add SAN</button>
+              <button type="button" id="add_san" class="btn-secondary">Add SAN</button>
+            </div>
+
+            <button class="btn-primary" id="setup_button">Generate CSR</button>
+            <div class="success">Key and CSR generated successfully!</div>
+          </div>
+
+          <!-- Right Panel: OUTPUT -->
+          <div class="dashboard-panel output-panel">
+            <div class="panel-title">Output</div>
+            <div class="results">
+              <div><h3>CSR:</h3><pre id="csr_output"></pre></div>
+              <div><h3>Private Key:</h3><pre id="key_output"></pre></div>
             </div>
           </div>
-          <button class="btn btn-primary button1" id="setup_button">Generate CSR</button>
-          <div class="success">Key and CSR files generated successfully</div>
         </div>
-        <div class="results">
-            <div>
-                <h3>CSR:</h3>
-                <pre id="csr_output" style="border: 1px solid #ccc; padding: 10px; overflow-x: auto;"></pre>
-            </div>
-            <div>
-                <h3>Key:</h3>
-                <pre id="key_output" style="border: 1px solid #ccc; padding: 10px; overflow-x: auto;"></pre>
-            </div>
-        </div>
-
       </html>
     </panel>
   </row>
