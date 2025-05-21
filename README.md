@@ -4,7 +4,8 @@
 
 ## Overview
 
-**CSR Generator** is a Splunk app that allows users to generate a Certificate Signing Request (CSR) and a password-protected private key directly from a simple dashboard UI inside Splunk.  
+**CSR Generator** is a Splunk app that allows users to generate a Certificate Signing Request (CSR) and a private key directly from a simple dashboard UI inside Splunk. 
+
 The app leverages the OpenSSL binary bundled with Splunk (`splunk cmd openssl`) and is fully compatible with **Windows and Linux environments**.
 
 
@@ -82,7 +83,7 @@ The app leverages the OpenSSL binary bundled with Splunk (`splunk cmd openssl`) 
 
 ## Links
 
-- Feel free to contribute or Fork via [https://github.com/aleeric/CSR-Generator](https://github.com/aleeric/CSR-Generator)
+- Feel free to contribute or Fork via [https://github.com/aleeric/CSR-Generator-for-Splunk](https://github.com/aleeric/CSR-Generator-for-Splunk)
 
 - Rate App on Splunkbase via https://splunkbase.splunk.com/app/7567
 
