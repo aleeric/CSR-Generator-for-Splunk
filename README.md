@@ -17,6 +17,7 @@ The app leverages the OpenSSL binary bundled with Splunk (`splunk cmd openssl`) 
 | 2024-10-04 | 0.0.1   | Initial release                                                       |
 | 2024-10-12 | 0.0.2   | Added `subjectAltName` support, improved input handling, bug fixes    |
 | 2025-05-21 | 0.1.0   | Major UI/UX redesign, improved CSR engine, full Windows/Linux support |
+| 2025-06-18 | 0.1.1   | Minor Fixes                                                           |
 
 ---
 
