@@ -1,4 +1,4 @@
-<dashboard isDashboard="true" script="javascript/generateCSR.js" stylesheet="styles/generator_page.css" hideTitle="true" version="1.8">
+<dashboard isDashboard="true" script="javascript/generateCSR.js" stylesheet="styles/generator_page.css" hideTitle="true" version="1.1">
   <label>CSR Generator</label>
   <row>
     <panel>
